@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Material de Estudo Digital - Ethernet</title>
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(135deg, #8B0000, #DC143C);
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        h1 {
+            text-align: center;
+            color: #8B0000;
+        }
+
+        h2 {
+            color: #B22222;
+            border-bottom: 2px solid #B22222;
+            padding-bottom: 5px;
+        }
+
+        h3 {
+            color: #444;
+        }
+
+        p {
+            line-height: 1.7;
+            color: #555;
+            text-align: justify;
+        }
+
+        ul {
+            background: #fff0f0;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        table th {
+            background-color: #B22222;
+            color: white;
+            padding: 10px;
+        }
+
+        table td {
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+
+        table tr:nth-child(even) {
+            background-color: #ffe5e5;
+        }
+
+        hr {
+            margin: 40px 0;
+        }
+
+        form {
+            background: #fff0f0;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        input[type="text"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+        }
+
+        input[type="radio"] {
+            margin-right: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #8B0000;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #5c0000;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            color: #888;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Material de Estudo</h1>
+    <h2>Protocolo Ethernet</h2>
+
+    <p>
+        O Ethernet é uma tecnologia de redes locais (LAN) utilizada para transmissão de dados entre dispositivos conectados. 
+        Ele define regras de comunicação e o formato dos dados transmitidos.
+        Desenvolvido inicialmente na década de 1970, tornou-se o padrão dominante em redes cabeadas devido à sua confiabilidade e escalabilidade.
+        Opera principalmente na Camada 2 (Enlace de Dados) do modelo OSI, sendo responsável pelo controle de acesso ao meio e endereçamento físico.
+        Sua padronização é definida pelo IEEE 802.3, garantindo interoperabilidade entre equipamentos de diferentes fabricantes.
+    </p>
+
+    <h3>Principais Características</h3>
+    <ul>
+        <li>Padrão IEEE 802.3</li>
+        <li>Transmissão em quadros (frames)</li>
+        <li>Alta velocidade (Fast Ethernet, Gigabit Ethernet e 10 Gigabit Ethernet)</li>
+        <li>Utiliza endereçamento MAC único para cada dispositivo</li>
+        <li>Suporte a diferentes meios físicos (par trançado, fibra óptica)</li>
+    </ul>
+
+    <h3>Estrutura do Quadro Ethernet</h3>
+
+    <table>
+        <tr>
+            <th>Campo</th>
+            <th>Função</th>
+        </tr>
+        <tr>
+            <td>MAC Destino</td>
+            <td>Identifica o dispositivo receptor na rede</td>
+        </tr>
+        <tr>
+            <td>MAC Origem</td>
+            <td>Identifica o dispositivo emissor</td>
+        </tr>
+        <tr>
+            <td>Tipo</td>
+            <td>Indica o protocolo encapsulado (ex: IPv4, IPv6)</td>
+        </tr>
+        <tr>
+            <td>Dados</td>
+            <td>Contém a informação transmitida pela camada superior</td>
+        </tr>
+        <tr>
+            <td>FCS</td>
+            <td>Campo de verificação de erros para garantir integridade</td>
+        </tr>
+    </table>
+
+    <hr>
+
+    <h2>Formulário de Avaliação</h2>
+
+    <form>
+
+        <label>Nome:</label>
+        <input type="text" name="nome" required>
+
+        <label>Você entendeu o conteúdo?</label><br>
+        <input type="radio" name="entendimento" value="sim"> Sim
+        <input type="radio" name="entendimento" value="parcial"> Parcialmente
+        <input type="radio" name="entendimento" value="nao"> Não
+
+        <br><br>
+
+        <label>Avalie o material:</label>
+        <select name="avaliacao">
+            <option>Excelente</option>
+            <option>Bom</option>
+            <option>Regular</option>
+            <option>Ruim</option>
+        </select>
+
+        <label>Sugestões:</label>
+        <textarea name="sugestoes" rows="4"></textarea>
+
+        <input type="submit" value="Enviar Avaliação">
+
+    </form>
+
+    <div class="footer">
+       Atividade 2 - FrontEnd • 2026
+    </div>
+
+</div>
+
+</body>
+</html>
